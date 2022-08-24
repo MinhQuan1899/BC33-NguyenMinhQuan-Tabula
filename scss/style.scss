@@ -1,0 +1,70 @@
+/* -------Text Color----------*/
+$c-dark: #2f2f2f;
+$c-light: #fffbe7;
+$c-hover: #b61984;
+/* -------Background Color-----*/
+$bg-1: #b61984;
+$bg-2: #ffffff;
+
+$bd-hover: #b61984;
+
+@mixin button($fs,$fw,$c,$bg,$pd,$bd,$br,$bg-hover,$c-hover,$bd-hover) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+    background: $bg;
+    padding: $pd;
+    border: $bd;
+    border-radius: $br;
+    cursor: pointer;
+    &:hover {
+        background: $bg-hover;
+        color: $c-hover;
+        border-color: $bd-hover;
+    }
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    
+        .logo {
+
+            img {
+                width: 100%;
+            }
+        }
+    
+        .menu {
+            nav {
+    
+                a {
+                    padding: 0 30px;
+                }
+            }
+        }
+    
+        .contact {
+            display: flex;
+            .button {
+
+                a {
+                    @include button(13px,300 ,$c-light ,$bg-1 ,15px ,3px ,30px ,$bg-2,$c-hover,$bd-hover )
+                }
+            }
+    
+            a {}
+        }
+  }
+}
